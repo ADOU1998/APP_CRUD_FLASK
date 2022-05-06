@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% include 'header.html' %}
+{% block title %} Add Student {% endblock %}
+
+{% block content %}
+    <h1>INSTERTION DES DONNEES</h1>
+
+    <div class="container" style="max-width: 40%;">
+        <form action="" method="POST">
+            <label for="">Sexe</label><br>
+            Masculin : <input type="radio" name="sexe" value="M">
+            Feminin : <input type="radio" name="sexe" value="F"><br>
+
+            <label for="">Prénoms</label>
+            <input type="text" name="first_name" class="form-control">
+
+            <label for="">Nom</label>
+            <input type="text" name="last_name" class="form-control">
+
+            <label for="">Email</label>
+            <input type="email" name="email" class="form-control"> <br>
+
+            <input type="submit" class="btn btn-dark" name="submit" value="Valider">
+        </form>
+    </div>
+
+{% endblock %}

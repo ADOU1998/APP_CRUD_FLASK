@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% include 'header.html' %}
+{% block title %} Add Student {% endblock %}
+
+{% block content %}
+    <h1>MODIFICATIONS DES DONNEES</h1>
+
+    <div class="container" style="max-width: 40%;">
+        <form action="" method="POST">
+            <label for="">Sexe</label><br>
+            Masculin : <input type="radio" name="sexe" value="M"
+            {% if student.sexe == 'M' %}
+                checked
+            {% endif %}
+            >
+            Feminin : <input type="radio" name="sexe" value="F"
+            {% if student.sexe == 'F' %}
+                checked
+            {% endif %}
+            ><br>
+
+            <label for="">Prénoms</label>
+            <input type="text" name="first_name" class="form-control" value="{{ student.first_name }}">
+
+            <label for="">Nom</label>
+            <input type="text" name="last_name" class="form-control"  value="{{ student.last_name }}">
+
+            <label for="">Email</label>
+            <input type="email" name="email" class="form-control"  value="{{ student.email }}"> <br>
+
+            <input type="submit" class="btn btn-dark" name="submit" value="Valider">
+        </form>
+    </div>
+
+{% endblock %}
